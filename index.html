@@ -3,1510 +3,1155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#07172b">
-<meta name="description" content="Chigozirim Wilson Weli - Professional Portfolio">
-<title>Chigozirim Wilson Weli | Portfolio</title>
+<meta name="theme-color" content="#071a2e">
+
+<title>Chigozirim Wilson Weli | Professional Portfolio</title>
+
+<meta name="description" content="Official professional portfolio of Chigozirim Wilson Weli, Frontend Developer, UI/UX Designer, AI Specialist and Safety Officer based in Port Harcourt, Nigeria.">
+
+<meta name="keywords" content="Chigozirim Wilson Weli, Frontend Developer, UI UX Designer, AI Specialist, Web Developer, Safety Officer, Port Harcourt">
+
+<meta name="author" content="Chigozirim Wilson Weli">
+<meta name="robots" content="index, follow">
 
 <style>
+/* =====================================
+   GLOBAL SETTINGS
+===================================== */
+
 :root {
-  --bg:#f4f7fb;
-  --surface:#fff;
-  --text:#14243a;
-  --muted:#607086;
-  --navy:#07172b;
-  --blue:#168bd2;
-  --cyan:#43c4e8;
-  --line:#dce5ef;
+    --primary: #071a2e;
+    --secondary: #102b47;
+    --accent: #00b8d9;
+    --accent-light: #55d8ee;
+    --background: #f5f7fa;
+    --surface: #ffffff;
+    --text: #17283a;
+    --muted: #65758a;
+    --border: #dce4ec;
+    --shadow: 0 12px 35px rgba(7,26,46,0.09);
 }
+
 body.dark {
-  --bg:#071321;
-  --surface:#0e2034;
-  --text:#edf5ff;
-  --muted:#a9b8c9;
-  --line:#263b52;
+    --primary: #07111e;
+    --secondary: #10243a;
+    --background: #081321;
+    --surface: #102137;
+    --text: #edf4fa;
+    --muted: #a8b8ca;
+    --border: #263b51;
+    --shadow: 0 12px 35px rgba(0,0,0,0.25);
 }
+
 * {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
 html {
-  scroll-behavior:smooth;
-  scroll-padding-top:85px;
+    scroll-padding-top: 85px;
 }
+
 body {
-  font-family:Arial, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
-}
-a {text-decoration:none;color:inherit}
-.container {
-  width:min(1120px,calc(100% - 40px));
-  margin:auto;
-}
-header {
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:var(--surface);
-  border-bottom:1px solid var(--line);
-}
-nav {
-  height:75px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-.brand {
-  font-size:22px;
-  font-weight:900;
-}
-.brand span {color:var(--blue)}
-.nav-links {
-  display:flex;
-  list-style:none;
-  gap:22px;
-}
-.nav-links a {
-  color:var(--muted);
-  font-size:14px;
-  font-weight:bold;
-}
-.nav-links a:hover {color:var(--blue)}
-.nav-actions {display:flex;gap:10px}
-.icon-btn,.menu-btn {
-  width:42px;
-  height:42px;
-  border:1px solid var(--line);
-  background:var(--surface);
-  color:var(--text);
-  border-radius:10px;
-  cursor:pointer;
-}
-.menu-btn {display:none}
-
-.hero {
-  background:
-  radial-gradient(circle at 80% 20%,#43c4e833,transparent 30%),
-  linear-gradient(125deg,#061426,#0d2948,#102f4e);
-  color:white;
-  padding:100px 0;
-}
-.hero-grid {
-  display:grid;
-  grid-template-columns:1.3fr .7fr;
-  align-items:center;
-  gap:60px;
-}
-.eyebrow {
-  color:var(--cyan);
-  text-transform:uppercase;
-  font-size:13px;
-  font-weight:bold;
-  letter-spacing:3px;
-}
-h1 {
-  font-size:clamp(45px,7vw,80px);
-  line-height:1.05;
-  margin:20px 0;
-}
-h1 span {color:var(--cyan)}
-.hero-role {
-  font-size:19px;
-  color:#c4d7e9;
-  font-weight:bold;
-}
-.hero-copy {
-  color:#c2d0df;
-  margin:22px 0 30px;
-  max-width:650px;
-}
-.button-row {
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-.btn {
-  display:inline-block;
-  padding:13px 20px;
-  border-radius:10px;
-  font-weight:bold;
-  border:1px solid transparent;
-  cursor:pointer;
-}
-.btn-primary {
-  background:linear-gradient(110deg,var(--blue),var(--cyan));
-  color:#041525;
-}
-.btn-outline {
-  border-color:#ffffff66;
-  color:white;
-  background:transparent;
-}
-.monogram-wrap {
-  display:grid;
-  place-items:center;
-}
-.monogram {
-  width:270px;
-  height:270px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  border:1px solid #43c4e888;
-  background:#ffffff12;
-  box-shadow:0 0 0 18px #43c4e811;
-  font-size:85px;
-  font-weight:900;
-}
-section {padding:85px 0}
-.section-head {
-  text-align:center;
-  max-width:700px;
-  margin:0 auto 40px;
-}
-.section-kicker {
-  color:var(--blue);
-  font-size:13px;
-  font-weight:bold;
-  letter-spacing:3px;
-}
-h2 {
-  font-size:clamp(30px,4vw,45px);
-  margin:10px 0;
-}
-.section-head p,.muted {color:var(--muted)}
-.panel,.skill-card,.project-card,
-.timeline-card,.credential-card,.contact-card {
-  background:var(--surface);
-  border:1px solid var(--line);
-  border-radius:18px;
-  box-shadow:0 15px 40px #07172b12;
-}
-.about-grid {
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:25px;
-}
-.panel {padding:30px}
-.panel h3 {margin-bottom:12px}
-.panel p {margin-bottom:12px}
-.stats {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:14px;
-}
-.stat {
-  padding:23px;
-  border-radius:15px;
-  background:var(--surface);
-  border:1px solid var(--line);
-}
-.stat strong {
-  display:block;
-  font-size:32px;
-  color:var(--blue);
-}
-.stat span {color:var(--muted)}
-.skills-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-.skill-card {
-  padding:23px;
-  transition:.3s;
-}
-.skill-card:hover,.project-card:hover {
-  transform:translateY(-5px);
-  border-color:var(--blue);
-}
-.skill-icon {
-  font-size:30px;
-  margin-bottom:12px;
-}
-.skill-card h3 {margin-bottom:7px}
-.skill-card p,.project-card p {
-  color:var(--muted);
-  font-size:14px;
-}
-.timeline {max-width:800px;margin:auto}
-.timeline-card {
-  padding:30px;
-  border-left:4px solid var(--blue);
-}
-.timeline-card h3 {font-size:23px}
-.company {
-  color:var(--blue);
-  font-weight:bold;
-  margin:5px 0 12px;
-}
-.projects-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-.project-card {padding:25px;transition:.3s}
-.project-icon {font-size:35px;margin-bottom:12px}
-.project-card h3 {margin-bottom:10px}
-.credentials-grid {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-}
-.credential-card {
-  padding:25px;
-  display:flex;
-  gap:15px;
-}
-.credential-card .symbol {font-size:30px}
-.contact-grid {
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:20px;
-}
-.contact-card {padding:28px}
-.contact-line {
-  display:flex;
-  gap:13px;
-  margin-top:18px;
-}
-.contact-line b {display:block}
-.contact-line span {color:var(--muted)}
-.contact-note {color:var(--muted);font-size:14px}
-footer {
-  background:var(--navy);
-  color:#b8c9da;
-  text-align:center;
-  padding:28px 0;
-}
-.reveal {
-  opacity:0;
-  transform:translateY(20px);
-  transition:.6s;
-}
-.reveal.visible {
-  opacity:1;
-  transform:translateY(0);
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+    transition: background .3s, color .3s;
 }
 
-@media(max-width:900px) {
-  .nav-links {gap:12px}
-  .nav-links a {font-size:12px}
-  .skills-grid {grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:720px) {
-  .menu-btn {display:block}
-  .nav-links {
-    display:none;
-    position:absolute;
-    top:75px;
-    left:0;
-    right:0;
-    background:var(--surface);
-    padding:20px;
-    flex-direction:column;
-    gap:15px;
-    border-bottom:1px solid var(--line);
-  }
-  .nav-links.open {display:flex}
-  .hero {padding:70px 0}
-  .hero-grid,.about-grid,.contact-grid {
-    grid-template-columns:1fr;
-  }
-  .hero-grid {text-align:center}
-  .hero-copy {margin-left:auto;margin-right:auto}
-  .button-row {justify-content:center}
-  .monogram-wrap {grid-row:1}
-  .monogram {width:190px;height:190px;font-size:60px}
-  .projects-grid {grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:520px) {
-  .skills-grid,.projects-grid,
-  .credentials-grid,.stats {
-    grid-template-columns:1fr;
-  }
-  .button-row .btn {width:100%;text-align:center}
-  section {padding:65px 0}
-}
-@media(prefers-reduced-motion:reduce) {
-  * {scroll-behavior:auto!important;transition:none!important}
-  .reveal {opacity:1;transform:none}
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<nav class="container">
-  <a href="#home" class="brand">W<span>.</span>WELI</a>
-
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-
-  <div class="nav-actions">
-    <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">☾</button>
-    <button class="menu-btn" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
-  </div>
-</nav>
-</header>
-
-<main>
-
-<section class="hero" id="home">
-<div class="container hero-grid">
-  <div>
-    <p class="eyebrow">Welcome to my professional portfolio</p>
-
-    <h1>Chigozirim<br><span>Wilson Weli</span></h1>
-
-    <p class="hero-role">
-      Frontend Developer · UI/UX Designer · AI Specialist
-    </p>
-
-    <p class="hero-copy">
-      I am a technology-driven professional passionate about
-      building modern digital experiences, designing intuitive
-      interfaces and exploring intelligent AI-powered solutions.
-      I combine creativity, technical knowledge and problem-solving
-      to deliver meaningful results.
-    </p>
-
-    <div class="button-row">
-      <a href="#projects" class="btn btn-primary">Explore My Work ↗</a>
-      <button class="btn btn-outline" id="downloadCv">Download CV ↓</button>
-      <a href="#contact" class="btn btn-outline">Contact Me</a>
-    </div>
-  </div>
-
-  <div class="monogram-wrap">
-    <div class="monogram">CW</div>
-  </div>
-</div>
-</section>
-
-<section id="about">
-<div class="container">
-  <div class="section-head reveal">
-    <span class="section-kicker">GET TO KNOW ME</span>
-    <h2>Building Digital Experiences With Purpose</h2>
-    <p>Professional background, passion and career journey.</p>
-  </div>
-
-  <div class="about-grid">
-    <article class="panel reveal">
-      <h3>About Me</h3>
-      <p>
-        My name is Chigozirim Wilson Weli. I am a Frontend
-        Developer, UI/UX Designer and AI Specialist.
-      </p>
-      <p>
-        My interests include web development, interface design,
-        digital innovation and the practical application of
-        artificial intelligence to solve problems.
-      </p>
-      <p>
-        I also have professional experience in safety operations
-        and currently serve as a Safety Officer at Lubrik
-        Construction Company.
-      </p>
-      <p>
-        I believe in continuous learning, professional excellence
-        and creating solutions that make a positive difference.
-      </p>
-    </article>
-
-    <div class="stats reveal">
-      <div class="stat"><strong>20+</strong><span>Years of Experience</span></div>
-      <div class="stat"><strong>03</strong><span>Core Professional Areas</span></div>
-      <div class="stat"><strong>AI</strong><span>Artificial Intelligence</span></div>
-      <div class="stat"><strong>PH</strong><span>Port Harcourt, Nigeria</span></div>
-    </div>
-  </div>
-</div>
-</section>
-
-<section id="skills">
-<div class="container">
-  <div class="section-head reveal">
-    <span class="section-kicker">WHAT I CAN DO</span>
-    <h2>Professional Skills</h2>
-    <p>Technical capabilities and areas of professional interest.</p>
-  </div>
-
-  <div class="skills-grid">
-    <article class="skill-card reveal"><div class="skill-icon">🌐</div><h3>HTML5</h3><p>Structured and accessible web pages.</p></article>
-    <article class="skill-card reveal"><div class="skill-icon">🎨</div><h3>CSS3</h3><p>Responsive layouts and modern interfaces.</p></article>
-    <article class="skill-card reveal"><div class="skill-icon">⚡</div><h3>JavaScript</h3><p>Interactive website functionality.</p></article>
-    <article class="skill-card reveal"><div class="skill-icon">🖌️</div><h3>UI/UX Design</h3><p>User-friendly digital experiences.</p></article>
-    <article class="skill-card reveal"><div class="skill-icon">🤖</div><h3>Artificial Intelligence</h3><p>AI applications and creative workflows.</p></article>
-    <article class="skill-card reveal"><div class="skill-icon">✍️</div><h3>Prompt Engineering</h3><p>Structured prompts for effective AI outputs.</p></article>
-    <article class="skill-card reveal"><div class="skill-icon">⚛️</div><h3>React</h3><p>Component-based frontend development.</p></article>
-    <article class="skill-card reveal"><div class="skill-icon">🐍</div><h3>Python</h3><p>Programming and automation interests.</p></article>
-    <article class="skill-card reveal"><div class="skill-icon">🔧</div><h3>Git & GitHub</h3><p>Version control and deployment.</p></article>
-    <article class="skill-card reveal"><div class="skill-icon">📰</div><h3>WordPress</h3><p>Website management and publishing.</p></article>
-    <article class="skill-card reveal"><div class="skill-icon">📐</div><h3>Figma</h3><p>Wireframes and interface prototyping.</p></article>
-    <article class="skill-card reveal"><div class="skill-icon">🦺</div><h3>Safety Operations</h3><p>Workplace safety and professional practice.</p></article>
-  </div>
-</div>
-</section>
-
-<section id="experience">
-<div class="container">
-  <div class="section-head reveal">
-    <span class="section-kicker">CAREER JOURNEY</span>
-    <h2>Professional Experience</h2>
-    <p>Professional discipline, problem-solving and continuous improvement.</p>
-  </div>
-
-  <div class="timeline reveal">
-    <article class="timeline-card">
-      <h3>Safety Officer</h3>
-      <p class="company">Lubrik Construction Company</p>
-      <p class="muted">
-        Supporting workplace safety operations, promoting compliance
-        with safety procedures, identifying potential hazards and
-        encouraging a strong safety culture.
-      </p>
-    </article>
-  </div>
-</div>
-</section>
-
-<section id="projects">
-<div class="container">
-  <div class="section-head reveal">
-    <span class="section-kicker">MY WORK</span>
-    <h2>Featured Projects</h2>
-    <p>Selected digital projects and creative concepts.</p>
-  </div>
-
-  <div class="projects-grid">
-    <article class="project-card reveal">
-      <div class="project-icon">💻</div>
-      <h3>Personal Portfolio</h3>
-      <p>A responsive portfolio website showcasing professional identity, skills and projects.</p>
-    </article>
-
-    <article class="project-card reveal">
-      <div class="project-icon">🍽️</div>
-      <h3>Wilson's Kitchen</h3>
-      <p>A food business website concept presenting meals, services and customer information.</p>
-    </article>
-
-    <article class="project-card reveal">
-      <div class="project-icon">🤖</div>
-      <h3>AI Digital Solutions</h3>
-      <p>Exploring AI-assisted digital creativity and technology solutions.</p>
-    </article>
-  </div>
-</div>
-</section>
-
-<section id="education">
-<div class="container">
-  <div class="section-head reveal">
-    <span class="section-kicker">LEARNING & DEVELOPMENT</span>
-    <h2>Education & Certifications</h2>
-    <p>Continuous learning and professional growth.</p>
-  </div>
-
-  <div class="credentials-grid">
-    <article class="credential-card reveal">
-      <div class="symbol">🎓</div>
-      <div>
-        <h3>Bachelor's Degree</h3>
-        <p class="muted">B.Sc. Geography and Environmental Studies.</p>
-      </div>
-    </article>
-
-    <article class="credential-card reveal">
-      <div class="symbol">🏅</div>
-      <div>
-        <h3>ITF AI Level 3 Specialist</h3>
-        <p class="muted">Currently in progress.</p>
-      </div>
-    </article>
-  </div>
-</div>
-</section>
-
-<section id="contact">
-<div class="container">
-  <div class="section-head reveal">
-    <span class="section-kicker">LET'S CONNECT</span>
-    <h2>Get In Touch</h2>
-    <p>Let's discuss professional opportunities and projects.</p>
-  </div>
-
-  <div class="contact-grid">
-    <article class="contact-card reveal">
-      <h3>Contact Information</h3>
-      <div class="contact-line">
-        <span>📍</span>
-        <div><b>Location</b><span>Port Harcourt, Rivers State, Nigeria</span></div>
-      </div>
-      <div class="contact-line">
-        <span>💼</span>
-        <div><b>Professional Interests</b><span>Frontend Development, UI/UX Design, AI and Safety Operations</span></div>
-      </div>
-    </article>
-
-    <article class="contact-card reveal">
-      <h3>Start a Conversation</h3>
-      <p class="contact-note">
-        Add your real email address in the CONTACT_EMAIL setting
-        in the JavaScript section to activate this button.
-      </p>
-      <a class="btn btn-primary" id="emailLink" href="#contact" style="margin-top:20px">Email Me ↗</a>
-    </article>
-  </div>
-</div>
-</section>
-
-</main>
-
-<footer>
-  <div class="container">
-    © <span id="year"></span> Chigozirim Wilson Weli. All rights reserved.
-  </div>
-</footer>
-
-<script>
-// Add your real email address between the quotes.
-const CONTACT_EMAIL = "";
-
-const navLinks = document.getElementById("navLinks");
-const menuToggle = document.getElementById("menuToggle");
-const themeToggle = document.getElementById("themeToggle");
-
-// Mobile navigation
-menuToggle.addEventListener("click", () => {
-  const open = navLinks.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(open));
-  menuToggle.textContent = open ? "✕" : "☰";
-});
-
-navLinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.textContent = "☰";
-  });
-});
-
-// Dark and light mode
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  const dark = document.body.classList.contains("dark");
-  themeToggle.textContent = dark ? "☀" : "☾";
-});
-
-// Automatic copyright year
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
-// Email button
-const emailLink = document.getElementById("emailLink");
-
-if (CONTACT_EMAIL.trim()) {
-  emailLink.href = "mailto:" + CONTACT_EMAIL.trim();
-} else {
-  emailLink.addEventListener("click", event => {
-    event.preventDefault();
-    alert("Please add your email address in CONTACT_EMAIL first.");
-  });
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-// Download CV as text file
-document.getElementById("downloadCv").addEventListener("click", () => {
-  const cv = `CHIGOZIRIM WILSON WELI
-Frontend Developer | UI/UX Designer | AI Specialist
-Safety Officer | Port Harcourt, Nigeria
-
-PROFILE
-Technology-driven professional passionate about frontend web development, UI/UX design and artificial intelligence. Also experienced in safety operations.
-
-PROFESSIONAL EXPERIENCE
-Safety Officer — Lubrik Construction Company.
-Supports workplace safety operations, promotes compliance with safety procedures, identifies potential hazards and encourages a strong safety culture.
-
-TECHNICAL SKILLS
-HTML5, CSS3, JavaScript, UI/UX Design, Artificial Intelligence, Prompt Engineering, React, Python, Git & GitHub, WordPress, Figma and Safety Operations.
-
-PROJECTS
-Personal Portfolio.
-Wilson's Kitchen.
-AI Digital Solutions.
-
-EDUCATION
-B.Sc. Geography and Environmental Studies.
-ITF AI Level 3 Specialist — In Progress.
-
-Please add verified employment dates, contact details and other relevant information before submitting this CV.`;
-
-  const blob = new Blob([cv], {
-    type: "text/plain;charset=utf-8"
-  });
-
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-
-  link.href = url;
-  link.download = "Chigozirim-Wilson-Weli-CV.txt";
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-
-  URL.revokeObjectURL(url);
-});
-
-// Scroll reveal animation
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
-}, {threshold:0.12});
-
-document.querySelectorAll(".reveal").forEach(element => {
-  observer.observe(element);
-});
-</script>
-
-</body>
-</html>
-}
-  }
+button,
+input,
+textarea {
+    font: inherit;
 }
 
-/* MOBILE */
+button {
+    cursor: pointer;
+}
 
-@media(max-width:850px) {
-  .menu-btn {
+img {
+    max-width: 100%;
     display: block;
-  }
+}
 
-  .nav-links {
-    position: absolute;
-    top: 75px;
-    left: 0;
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+section {
+    padding: 90px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading span {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    font-size: clamp(29px, 4vw, 40px);
+    margin-top: 8px;
+    color: var(--text);
+}
+
+.section-heading p {
+    max-width: 620px;
+    margin: 12px auto 0;
+    color: var(--muted);
+}
+
+/* =====================================
+   HEADER AND NAVIGATION
+===================================== */
+
+header {
     width: 100%;
-    padding: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     background: var(--surface);
     border-bottom: 1px solid var(--border);
-    display: none;
-    flex-direction: column;
-    gap: 20px;
-  }
+    box-shadow: 0 3px 15px rgba(0,0,0,.025);
+}
 
-  .nav-links.active {
+.navbar {
+    height: 82px;
     display: flex;
-  }
+    align-items: center;
+    justify-content: space-between;
+}
 
-  .hero-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    color: var(--primary);
+    letter-spacing: -1px;
+}
 
-  .hero-image {
-    grid-row: 1;
-  }
+body.dark .logo {
+    color: white;
+}
 
-  .hero-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.logo span {
+    color: var(--accent);
+}
 
-  .hero-buttons {
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 650;
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.theme-btn,
+.menu-btn {
+    width: 46px;
+    height: 46px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    min-height: 760px;
+    padding: 155px 0 90px;
+    background:
+        radial-gradient(circle at 85% 30%, rgba(0,184,217,.13), transparent 30%),
+        linear-gradient(125deg, var(--primary), var(--secondary));
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.hero-label {
+    display: inline-block;
+    color: var(--accent-light);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(39px, 5.5vw, 65px);
+    line-height: 1.13;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: var(--accent-light);
+}
+
+.hero h3 {
+    font-size: clamp(18px, 2vw, 23px);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.typing-text {
+    color: var(--accent-light);
+    font-weight: 750;
+}
+
+.hero-description {
+    max-width: 610px;
+    color: #d1dfeb;
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-  }
+    gap: 8px;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-weight: 750;
+    border: 2px solid var(--accent);
+    transition: .3s;
+}
 
-  .about-grid, .contact-grid {
-    grid-template-columns: 1fr;
-  }
+.btn-primary {
+    background: var(--accent);
+    color: #061726;
+}
 
-  .skills-grid, .projects-grid {
+.btn-primary:hover {
+    background: transparent;
+    color: white;
+}
+
+.btn-outline {
+    color: white;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+    color: #061726;
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-circle {
+    width: 340px;
+    height: 340px;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 9px solid rgba(255,255,255,.12);
+    background:
+        radial-gradient(circle, #163c59, #071a2e 75%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 70px rgba(0,184,217,.15);
+    position: relative;
+}
+
+.profile-circle::before {
+    content: "";
+    position: absolute;
+    inset: -18px;
+    border: 2px solid rgba(0,184,217,.4);
+    border-radius: 50%;
+}
+
+.profile-initials {
+    font-size: 95px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: -8px;
+}
+
+.profile-initials span {
+    color: var(--accent);
+}
+
+/* =====================================
+   ABOUT SECTION
+===================================== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.about-card {
+    background: var(--primary);
+    color: white;
+    border-radius: 18px;
+    padding: 45px 35px;
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.about-card h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #c5d7e6;
+}
+
+.about-content h3 {
+    font-size: 27px;
+    margin-bottom: 18px;
+}
+
+.about-content p {
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.about-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.detail-item {
+    padding: 13px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+}
+
+.detail-item strong {
+    display: block;
+    color: var(--accent);
+    font-size: 13px;
+}
+
+.detail-item span {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* =====================================
+   EXPERIENCE HIGHLIGHTS
+===================================== */
+
+.highlights {
+    background: var(--primary);
+    padding: 55px 0;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.highlight-item h3 {
+    color: var(--accent-light);
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.highlight-item p {
+    color: #d1dfeb;
+    font-size: 14px;
+}
+
+/* =====================================
+   SKILLS SECTION
+===================================== */
+
+.skills-grid {
+    display: grid;
     grid-template-columns: repeat(2,1fr);
-  }
+    gap: 25px;
 }
 
-@media(max-width:550px) {
-  section {
-    padding: 65px 0;
-  }
-
-  .logo {
-    font-size: 21px;
-  }
-
-  .skills-grid, .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-circle {
-    width: 220px;
-    height: 220px;
-    font-size: 60px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .hero h3 {
-    font-size: 17px;
-  }
-
-  .contact-form {
-    padding: 18px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <nav class="container">
-
-    <a href="#home" class="logo">CW<span>.</span></a>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <div class="nav-actions">
-      <button id="themeBtn" aria-label="Change theme">☾</button>
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-    </div>
-
-  </nav>
-</header>
-
-<main>
-
-<!-- HOME -->
-
-<section class="hero" id="home">
-  <div class="container hero-grid">
-
-    <div class="reveal">
-
-      <span class="hero-label">WELCOME TO MY PROFESSIONAL PORTFOLIO</span>
-
-      <h1>
-        Chigozirim<br>
-        <span>Wilson Weli</span>
-      </h1>
-
-      <h3>
-        I'm a <span class="typing" id="typing">Frontend Developer</span>
-      </h3>
-
-      <p class="hero-description">
-        I am a technology-driven professional passionate about
-        frontend web development, UI/UX design and artificial
-        intelligence. I enjoy creating modern digital experiences,
-        developing creative solutions and using technology to
-        solve real-world problems.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">Explore My Work</a>
-        <button onclick="downloadCV()" class="btn btn-outline">Download CV</button>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
-      </div>
-
-    </div>
-
-    <div class="hero-image reveal">
-      <div class="profile-circle">CW</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-  <div class="container">
-
-    <div class="section-heading reveal">
-      <span>GET TO KNOW ME</span>
-      <h2>About Me</h2>
-      <p>My professional identity and journey.</p>
-    </div>
-
-    <div class="about-grid">
-
-      <div class="about-text reveal">
-
-        <h3>Building Digital Experiences With Purpose</h3>
-
-        <p>
-          My name is Chigozirim Wilson Weli. I am a Frontend Web
-          Developer, UI/UX Designer and AI Specialist.
-        </p>
-
-        <p>
-          With over two decades of professional experience, I value
-          creativity, continuous learning, innovation and professional
-          excellence.
-        </p>
-
-        <p>
-          My interests include website development, responsive
-          interfaces, user experience, AI-powered solutions and
-          digital innovation.
-        </p>
-
-        <p>
-          I am committed to developing my technical abilities and
-          delivering meaningful digital experiences.
-        </p>
-
-      </div>
-
-      <div class="info-grid reveal">
-
-        <div class="info-card">
-          <strong>20+</strong>
-          <small>Years of Professional Experience</small>
-        </div>
-
-        <div class="info-card">
-          <strong>03</strong>
-          <small>Core Professional Areas</small>
-        </div>
-
-        <div class="info-card">
-          <strong>AI</strong>
-          <small>Artificial Intelligence</small>
-        </div>
-
-        <div class="info-card">
-          <strong>PH</strong>
-          <small>Port Harcourt, Nigeria</small>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-
-<section class="skills-section" id="skills">
-  <div class="container">
-
-    <div class="section-heading reveal">
-      <span>MY CAPABILITIES</span>
-      <h2>Technical Skills</h2>
-      <p>My areas of technical interest and development.</p>
-    </div>
-
-    <div class="skills-grid">
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">🌐</div>
-        <h3>HTML5</h3>
-        <p>Semantic website structure and accessible web pages.</p>
-        <div class="progress"><span data-width="90%"></span></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">🎨</div>
-        <h3>CSS3</h3>
-        <p>Responsive design, layouts and modern styling.</p>
-        <div class="progress"><span data-width="85%"></span></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">⚡</div>
-        <h3>JavaScript</h3>
-        <p>Interactive features and frontend functionality.</p>
-        <div class="progress"><span data-width="80%"></span></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">🖌️</div>
-        <h3>UI/UX Design</h3>
-        <p>User-centred interface design and experiences.</p>
-        <div class="progress"><span data-width="80%"></span></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">🤖</div>
-        <h3>Artificial Intelligence</h3>
-        <p>AI tools, creative workflows and intelligent solutions.</p>
-        <div class="progress"><span data-width="75%"></span></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">✍️</div>
-        <h3>Prompt Engineering</h3>
-        <p>Creating structured prompts for AI applications.</p>
-        <div class="progress"><span data-width="80%"></span></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">⚛️</div>
-        <h3>React</h3>
-        <p>Component-based frontend development.</p>
-        <div class="progress"><span data-width="70%"></span></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">🐍</div>
-        <h3>Python</h3>
-        <p>Programming fundamentals and automation.</p>
-        <div class="progress"><span data-width="65%"></span></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">🔧</div>
-        <h3>Git & GitHub</h3>
-        <p>Version control and website deployment.</p>
-        <div class="progress"><span data-width="80%"></span></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-  <div class="container">
-
-    <div class="section-heading reveal">
-      <span>MY JOURNEY</span>
-      <h2>Professional Experience</h2>
-    </div>
-
-    <div class="experience-card reveal">
-      <h3>Professional Experience</h3>
-      <p>
-        Over two decades of professional experience, with a
-        commitment to continuous development, problem-solving,
-        innovation and professional excellence.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- PROJECTS -->
-
-<section class="projects-section" id="projects">
-  <div class="container">
-
-    <div class="section-heading reveal">
-      <span>MY WORK</span>
-      <h2>Featured Projects</h2>
-      <p>Selected digital projects and creative concepts.</p>
-    </div>
-
-    <div class="projects-grid">
-
-      <article class="project-card reveal">
-        <div class="project-art">💻</div>
-        <div class="project-info">
-          <h3>Personal Portfolio</h3>
-          <p>
-            A responsive portfolio website showcasing professional
-            identity, capabilities and projects.
-          </p>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-art">🍽️</div>
-        <div class="project-info">
-          <h3>Wilson's Kitchen</h3>
-          <p>
-            A food business website concept designed to present
-            meals, services and customer information.
-          </p>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="project-art">🤖</div>
-        <div class="project-info">
-          <h3>AI Digital Solutions</h3>
-          <p>
-            Exploring AI-assisted digital creativity and
-            technology-based solutions.
-          </p>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-
-<section id="education">
-  <div class="container">
-
-    <div class="section-heading reveal">
-      <span>LEARNING & DEVELOPMENT</span>
-      <h2>Education & Certifications</h2>
-    </div>
-
-    <div class="education-card reveal">
-      <h3>Bachelor's Degree</h3>
-      <p>
-        B.Sc. Geography and Environmental Studies.
-      </p>
-    </div>
-
-    <div class="education-card reveal">
-      <h3>ITF AI Level 3 Specialist</h3>
-      <p>Currently in progress.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-
-<section class="contact-section" id="contact">
-  <div class="container">
-
-    <div class="section-heading reveal">
-      <span>LET'S CONNECT</span>
-      <h2>Get In Touch</h2>
-      <p>Let's discuss professional opportunities and projects.</p>
-    </div>
-
-    <div class="contact-grid">
-
-      <div class="contact-details reveal">
-        <h3>Contact Information</h3>
-
-        <p>
-          📍 Location:<br>
-          Port Harcourt, Rivers State, Nigeria
-        </p>
-
-    flow: hidden;
-  display: none;
+.skill-card {
+    background: var(--surface);
+    padding: 27px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    box-shadow: var(--shadow);
+    transition: .3s;
 }
 
-.chat-box.active {
-  display: block;
-  animation: slideUp .3s ease;
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
 }
 
-.chat-header {
-  background: #10233f;
-  color: white;
-  padding: 17px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
+.skill-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
-.chat-header button {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 20px;
+.skill-card p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 18px;
 }
 
-.chat-content {
-  padding: 17px;
-  height: 230px;
-  overflow-y: auto;
-  font-size: 13px;
+.skill-bar {
+    height: 8px;
+    background: var(--border);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.chat-message {
-  background: var(--silver);
-  color: var(--text);
-  padding: 11px;
-  border-radius: 9px;
-  margin-bottom: 10px;
+.skill-progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    border-radius: 20px;
+    transition: width 1.5s ease;
 }
 
-.chat-input {
-  display: flex;
-  border-top: 1px solid var(--border);
+.skill-card small {
+    display: block;
+    text-align: right;
+    color: var(--accent);
+    font-weight: 800;
+    margin-top: 8px;
 }
 
-.chat-input input {
-  flex: 1;
-  min-width: 0;
-  border: none;
-  padding: 13px;
-  outline: none;
-  background: var(--card);
-  color: var(--text);
+/* =====================================
+   SERVICES SECTION
+===================================== */
+
+.services {
+    background: var(--surface);
 }
 
-.chat-input button {
-  background: #10233f;
-  color: white;
-  border: none;
-  padding: 0 17px;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
 }
 
-/* ANIMATIONS */
+.service-card {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 30px;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--accent);
+    box-shadow: var(--shadow);
+}
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+    background: rgba(0,184,217,.12);
+    color: var(--accent);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.service-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =====================================
+   PROJECTS SECTION
+===================================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 28px;
+}
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-cover {
+    min-height: 210px;
+    background: linear-gradient(135deg, #071a2e, #087d9b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+    color: white;
+}
+
+.project-cover h3 {
+    font-size: 25px;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content p {
+    color: var(--muted);
+    margin: 12px 0;
+    font-size: 14px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.project-tags span {
+    font-size: 11px;
+    padding: 6px 10px;
+    background: rgba(0,184,217,.12);
+    color: var(--accent);
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+/* =====================================
+   EXPERIENCE AND EDUCATION
+===================================== */
+
+.timeline-section {
+    background: var(--surface);
+}
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+    border-left: 3px solid var(--accent);
+    padding-left: 30px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 35px;
+    padding: 25px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--accent);
+    border-radius: 50%;
+    left: -39px;
+    top: 30px;
+}
+
+.timeline-item h3 {
+    margin-bottom: 7px;
+}
+
+.timeline-item h4 {
+    color: var(--accent);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =====================================
+   CONTACT SECTION
+===================================== */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 40px;
+}
+
+.contact-info {
+    background: var(--primary);
+    padding: 35px;
+    border-radius: 15px;
+    color: white;
+}
+
+.contact-info h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: #c5d7e6;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin-bottom: 22px;
+}
+
+.contact-item strong {
+    display: block;
+    color: var(--accent-light);
+    font-size: 13px;
+}
+
+.contact-item a,
+.contact-item span {
+    overflow-wrap: anywhere;
+}
+
+.contact-form {
+    background: var(--surface);
+    padding: 32px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    background: var(--background);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    transition: .3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.contact-form button {
+    width: 100%;
+    border: none;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background: #061526;
+    color: #c5d7e6;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 27px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-logo span {
+    color: var(--accent);
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.social-links a {
+    color: var(--accent-light);
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.social-links a:hover {
+    color: white;
+}
+
+/* =====================================
+   BACK TO TOP
+===================================== */
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 22px;
+    width: 48px;
+    height: 48px;
+    background: var(--accent);
+    color: #061526;
+    border: none;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 900;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =====================================
+   SCROLL ANIMATIONS
+===================================== */
 
 .reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity .8s ease, transform .8s ease;
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .8s ease, transform .8s ease;
 }
 
 .reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
-@keyframes slideUp {
-  from {opacity:0; transform:translateY(15px);}
-  to {opacity:1; transform:translateY(0);}
+/* =====================================
+   MOBILE RESPONSIVENESS
+===================================== */
+
+@media(max-width: 1000px) {
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .hero-grid {
+        gap: 30px;
+    }
+
+    .profile-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .profile-initials {
+        font-size: 75px;
+    }
 }
 
-/* RESPONSIVE */
+@media(max-width: 850px) {
 
-@media(max-width:850px) {
-  .menu-btn {display:block;}
+    .menu-btn {
+        display: grid;
+    }
 
-  .nav-links {
-    position: absolute;
-    top: 76px;
-    left: 0;
-    width: 100%;
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    display: none;
-    flex-direction: column;
-    padding: 25px;
-    gap: 22px;
-  }
+    .nav-links {
+        position: absolute;
+        top: 81px;
+        left: 0;
+        width: 100%;
+        padding: 25px 5%;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        box-shadow: var(--shadow);
+    }
 
-  .nav-links.active {display:flex;}
+    .nav-links.active {
+        display: flex;
+    }
 
-  .hero-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
+    .nav-links a {
+        font-size: 16px;
+    }
 
-  .hero-description {margin: 0 auto 25px;}
-  .hero-buttons {justify-content:center;}
-  .hero-image {grid-row:1;}
+    .hero {
+        min-height: auto;
+    }
 
-  .about-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
-  .skills-grid,
-  .projects-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        grid-row: 1;
+    }
+
+    .profile-circle {
+        width: 240px;
+        height: 240px;
+    }
+
+    .profile-initials {
+        font-size: 65px;
+    }
+
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 
-@media(max-width:550px) {
-  section {padding: 70px 0;}
-  nav {height:68px;}
-  .logo {font-size:17px;}
-  .nav-links {top:68px;}
-  .skills-grid,
-  .projects-grid,
-  .about-info {
-    grid-template-columns: 1fr;
-  }
-  .hero {padding-top:110px;}
-  .hero h1 {letter-spacing:-1px;}
-  .profile-placeholder {width:220px;font-size:60px;}
-  .contact-form {padding:20px;}
+@media(max-width: 550px) {
+
+    .container {
+        width: 90%;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .navbar {
+        height: 75px;
+    }
+
+    .nav-links {
+        top: 74px;
+    }
+
+    .theme-btn,
+    .menu-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .hero {
+        padding: 125px 0 65px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero h3 {
+        font-size: 18px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .profile-circle {
+        width: 205px;
+        height: 205px;
+    }
+
+    .profile-initials {
+        font-size: 58px;
+    }
+
+    .about-card {
+        padding: 30px 25px;
+    }
+
+    .about-details {
+        grid-template-columns: 1fr;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .skills-grid,
+    .services-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 24px 20px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .timeline {
+        padding-left: 22px;
+    }
+
+    .timeline-item::before {
+        left: -31px;
+    }
+
+    .btn {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
 }
+
+/* =====================================
+   PRINT / CV DOWNLOAD
+===================================== */
+
+@media print {
+
+    header,
+    .back-to-top,
+    .hero-buttons,
+    .contact-grid,
+    footer,
+    .highlights,
+    .services,
+    .projects-section,
+    .theme-btn,
+    .menu-btn {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    section {
+        padding: 15px 0 !important;
+        break-inside: avoid;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 20px 0;
+        background: white !important;
+        color: black !important;
+    }
+
+    .hero-grid {
+        display: block;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    .hero-description,
+    .about-content p,
+    .timeline-item p {
+        color: #333 !important;
+    }
+
+    .hero h1,
+    .hero h3,
+    .about-content h3,
+    .section-heading h2,
+    .timeline-item h3 {
+        color: black !important;
+    }
+
+    .profile-circle,
+    .about-card {
+        display: none;
+    }
+
+    .skill-card,
+    .timeline-item,
+    .detail-item {
+        box-shadow: none;
+        background: white !important;
+        color: black !important;
+    }
+
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- =====================================
+     HEADER
+===================================== -->
+
 <header>
-  <nav class="container">
-    <a href="#home" class="logo">CW<span>.</span></a>
+    <div class="container navbar">
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+        <a href="#home" class="logo">
+            W<span>.</span>WELI
+        </a>
 
-    <div class="nav-actions">
-      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
-      <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+
+            <button class="theme-btn" id="themeToggle"
+                aria-label="Toggle dark and light mode">
+                ☾
+            </button>
+
+            <button class="menu-btn" id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+        </div>
+
     </div>
-  </nav>
 </header>
 
-<main>
 
-<!-- HERO -->
-
-<section class="hero" id="home">
-  <div class="container hero-content">
-
-    <div class="reveal">
-      <span class="hero-label">WELCOME TO MY PROFESSIONAL PORTFOLIO</span>
-
-      <h1>Chigozirim<br><span>Wilson Weli</span></h1>
-
-      <h3>
-        I'm a <span class="typing" id="typing"></span>
-      </h3>
-
-      <p class="hero-description">
-        A technology-driven professional passionate about building
-        modern digital experiences, designing intuitive interfaces
-        and exploring intelligent AI-powered solutions. I combine
-        creativity, technical knowledge and problem-solving to
-        deliver meaningful results.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">Explore My Work</a>
-        <button class="btn btn-outline" onclick="downloadCV()">Download CV</button>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
-      </div>
-    </div>
-
-    <div class="hero-image reveal">
-      <div class="profile-placeholder">CW</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-  <div class="container">
-
-    <div class="section-heading reveal">
-      <span>GET TO KNOW ME</span>
-      <h2>About Me</h2>
-      <p>Professional background, passion and career journey.</p>
-    </div>
-
-    <div class="about-grid">
-
-      <div class="about-text reveal">
-        <h3 style="margin-bottom:18px;font-size:24px;">
-          Building Digital Experiences With Purpose
-        </h3>
-
-        <p>
-          My name is Chigozirim Wilson Weli. I am a Frontend Developer,
-          UI/UX Designer and AI Specialist with over two decades of
-          professional experience.
-        </p>
-
-        <p>
-          My interests include web development, interface design,
-          digital innovation and the practical application of
-          artificial intelligence to solve problems.
-        </p>
-
-        <p>
-          I also have professional experience in safety operations
-          and currently serve as a Safety Officer at Lubrik
-          Construction Company.
-        </p>
-
-        <p>
-          I believe in continuous learning, professional excellence
-          and creating solutions that make a positive difference.
-        </p>
-      </div>
-
-      <div class="about-info reveal">
-        <div class="info-box">
-          <strong>20+</strong>
-          <small>Years of Experience</small>
-        </div>
-
-        <div class="info-box">
-          <strong>3</strong>
-          <small>Core Professional Areas</small>
-        </div>
-
-        <div class="info-box">
-          <strong>AI</strong>
-          <small>Artificial Intelligence</small>
-        </div>
-
-        <div class="info-box">
-          <strong>PH</strong>
-          <small>Port Harcourt, Nigeria</small>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-
-<section class="skills-section" id="skills">
-  <div class="container">
-
-    <div class="section-heading reveal">
-      <span>WHAT I CAN DO</span>
-      <h2>Professional Skills</h2>
-      <p>Technical capabilities and areas of professional interest.</p>
-    </div>
-
-    <div class="skills-grid">
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">🌐</div>
-        <h3>HTML5</h3>
-        <p>Building structured, accessible and semantic web pages.</p>
-        <div class="skill-progress"><div data-width="90%"></div></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">🎨</div>
-        <h3>CSS3</h3>
-        <p>Responsive layouts, visual styling and modern interfaces.</p>
-        <div class="skill-progress"><div data-width="85%"></div></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">⚡</div>
-        <h3>JavaScript</h3>
-        <p>Interactive website features and frontend functionality.</p>
-        <div class="skill-progress"><div data-width="80%"></div></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">🖌️</div>
-        <h3>UI/UX Design</h3>
-        <p>Designing user-friendly and visually appealing experiences.</p>
-        <div class="skill-progress"><div data-width="85%"></div></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">🤖</div>
-        <h3>Artificial Intelligence</h3>
-        <p>AI applications, creative workflows and intelligent solutions.</p>
-        <div class="skill-progress"><div data-width="75%"></div></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">✍️</div>
-        <h3>Prompt Engineering</h3>
-        <p>Developing structured prompts for effective AI outputs.</p>
-        <div class="skill-progress"><div data-width="80%"></div></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">⚛️</div>
-        <h3>React</h3>
-        <p>Component-based frontend development.</p>
-        <div class="skill-progress"><div data-width="70%"></div></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">🐍</div>
-        <h3>Python</h3>
-        <p>Programming fundamentals and automation interests.</p>
-        <div class="skill-progress"><div data-width="65%"></div></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">🔧</div>
-        <h3>Git & GitHub</h3>
-        <p>Version control and web project deployment.</p>
-        <div class="skill-progress"><div data-width="80%"></div></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">📰</div>
-        <h3>WordPress</h3>
-        <p>Website management and content publishing.</p>
-        <div class="skill-progress"><div data-width="70%"></div></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">📐</div>
-        <h3>Figma</h3>
-        <p>Interface design, wireframes and prototyping.</p>
-        <div class="skill-progress"><div data-width="75%"></div></div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-icon">🦺</div>
-        <h3>Safety Operations</h3>
-        <p>Workplace safety awareness and professional safety practice.</p>
-        <div class="skill-progress"><div data-width="85%"></div></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-  <div class="container">
-
-    <div class="section-heading reveal">
-      <span>CAREER JOURNEY</span>
-      <h2>Professional Experience</h2>
-    </div>
-
-    <div class="experience-card reveal">
-      <h3>Safety Officer</h3>
-      <h4>Lubrik Construction Company</h4>
-
-      <p>
-        Responsible for supporting workplace safety operations,
-        promoting compliance with safety procedures, identifying
-        potential hazards and encouraging a strong safety culture.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- PROJECTS -->
-
-<section class="projects-section" id="projects">
-  <div class="container">
-
-    <div class="
+<!-- ===========

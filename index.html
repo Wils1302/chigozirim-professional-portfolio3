@@ -3,637 +3,691 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Chigozirim Wilson Weli | Professional Portfolio</title>
-
-<meta name="description" content="Chigozirim Wilson Weli - Frontend Web Developer, UI/UX Designer and AI Specialist. Explore my professional portfolio, skills and projects.">
-<meta name="author" content="Chigozirim Wilson Weli">
-<meta name="theme-color" content="#10233f">
-<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#07172b">
+<meta name="description" content="Chigozirim Wilson Weli - Professional Portfolio">
+<title>Chigozirim Wilson Weli | Portfolio</title>
 
 <style>
 :root {
-  --primary: #10233f;
-  --secondary: #7896b8;
-  --background: #f4f7fb;
-  --surface: #ffffff;
-  --text: #263449;
-  --muted: #728096;
-  --border: #e2e8f0;
-  --shadow: 0 12px 35px rgba(16,35,63,.09);
+  --bg:#f4f7fb;
+  --surface:#fff;
+  --text:#14243a;
+  --muted:#607086;
+  --navy:#07172b;
+  --blue:#168bd2;
+  --cyan:#43c4e8;
+  --line:#dce5ef;
 }
-
 body.dark {
-  --primary: #d9e8fa;
-  --secondary: #9bb8dc;
-  --background: #101a2a;
-  --surface: #19273b;
-  --text: #e5edf8;
-  --muted: #a5b4c8;
-  --border: #304158;
-  --shadow: 0 12px 35px rgba(0,0,0,.2);
+  --bg:#071321;
+  --surface:#0e2034;
+  --text:#edf5ff;
+  --muted:#a9b8c9;
+  --line:#263b52;
 }
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
-
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:85px;
+}
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--background);
-  color: var(--text);
-  line-height: 1.7;
-  transition: background .3s, color .3s;
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button, input, textarea {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
+a {text-decoration:none;color:inherit}
 .container {
-  width: min(1120px, 90%);
-  margin: auto;
+  width:min(1120px,calc(100% - 40px));
+  margin:auto;
 }
-
-section {
-  padding: 85px 0;
-}
-
-h1, h2, h3, h4 {
-  color: var(--primary);
-  line-height: 1.25;
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.section-heading span {
-  color: var(--secondary);
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 3px;
-}
-
-.section-heading h2 {
-  font-size: clamp(28px, 4vw, 40px);
-  margin: 10px 0;
-}
-
-.section-heading p {
-  color: var(--muted);
-}
-
-/* NAVIGATION */
-
 header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 3px 15px rgba(0,0,0,.03);
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:var(--surface);
+  border-bottom:1px solid var(--line);
 }
-
 nav {
-  min-height: 75px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
-
-.logo {
-  font-size: 25px;
-  font-weight: 900;
-  color: var(--primary);
+.brand {
+  font-size:22px;
+  font-weight:900;
 }
-
-.logo span {
-  color: var(--secondary);
-}
-
+.brand span {color:var(--blue)}
 .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 23px;
-  list-style: none;
+  display:flex;
+  list-style:none;
+  gap:22px;
 }
-
 .nav-links a {
-  font-size: 13px;
-  font-weight: bold;
-  transition: .3s;
+  color:var(--muted);
+  font-size:14px;
+  font-weight:bold;
 }
-
-.nav-links a:hover {
-  color: var(--secondary);
+.nav-links a:hover {color:var(--blue)}
+.nav-actions {display:flex;gap:10px}
+.icon-btn,.menu-btn {
+  width:42px;
+  height:42px;
+  border:1px solid var(--line);
+  background:var(--surface);
+  color:var(--text);
+  border-radius:10px;
+  cursor:pointer;
 }
-
-.nav-actions {
-  display: flex;
-  gap: 10px;
-}
-
-.nav-actions button {
-  padding: 10px 13px;
-  background: var(--background);
-  color: var(--primary);
-  border: 1px solid var(--border);
-  border-radius: 9px;
-  font-size: 18px;
-}
-
-.menu-btn {
-  display: none;
-}
-
-/* HERO */
+.menu-btn {display:none}
 
 .hero {
-  min-height: 88vh;
-  display: flex;
-  align-items: center;
   background:
-    radial-gradient(circle at 85% 20%, rgba(120,150,184,.2), transparent 35%),
-    var(--background);
+  radial-gradient(circle at 80% 20%,#43c4e833,transparent 30%),
+  linear-gradient(125deg,#061426,#0d2948,#102f4e);
+  color:white;
+  padding:100px 0;
 }
-
 .hero-grid {
-  display: grid;
-  grid-template-columns: 1.3fr .7fr;
-  align-items: center;
-  gap: 50px;
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  align-items:center;
+  gap:60px;
 }
-
-.hero-label {
-  display: inline-block;
-  padding: 8px 15px;
-  border-radius: 30px;
-  background: rgba(120,150,184,.15);
-  color: var(--secondary);
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
+.eyebrow {
+  color:var(--cyan);
+  text-transform:uppercase;
+  font-size:13px;
+  font-weight:bold;
+  letter-spacing:3px;
 }
-
-.hero h1 {
-  font-size: clamp(38px, 6vw, 65px);
-  letter-spacing: -2px;
-  margin-bottom: 15px;
+h1 {
+  font-size:clamp(45px,7vw,80px);
+  line-height:1.05;
+  margin:20px 0;
 }
-
-.hero h1 span {
-  color: var(--secondary);
+h1 span {color:var(--cyan)}
+.hero-role {
+  font-size:19px;
+  color:#c4d7e9;
+  font-weight:bold;
 }
-
-.hero h3 {
-  font-size: 21px;
-  margin-bottom: 20px;
+.hero-copy {
+  color:#c2d0df;
+  margin:22px 0 30px;
+  max-width:650px;
 }
-
-.typing {
-  color: var(--secondary);
+.button-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
 }
-
-.hero-description {
-  color: var(--muted);
-  max-width: 600px;
-  margin-bottom: 28px;
-}
-
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
 .btn {
-  display: inline-block;
-  padding: 13px 22px;
-  border-radius: 7px;
-  font-weight: bold;
-  font-size: 13px;
-  border: 1px solid var(--primary);
-  transition: .3s;
+  display:inline-block;
+  padding:13px 20px;
+  border-radius:10px;
+  font-weight:bold;
+  border:1px solid transparent;
+  cursor:pointer;
 }
-
 .btn-primary {
-  background: #10233f;
-  color: white;
+  background:linear-gradient(110deg,var(--blue),var(--cyan));
+  color:#041525;
 }
-
 .btn-outline {
-  color: var(--primary);
-  background: transparent;
+  border-color:#ffffff66;
+  color:white;
+  background:transparent;
 }
-
-.btn:hover {
-  transform: translateY(-3px);
+.monogram-wrap {
+  display:grid;
+  place-items:center;
 }
-
-.hero-image {
-  display: flex;
-  justify-content: center;
+.monogram {
+  width:270px;
+  height:270px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  border:1px solid #43c4e888;
+  background:#ffffff12;
+  box-shadow:0 0 0 18px #43c4e811;
+  font-size:85px;
+  font-weight:900;
 }
-
-.profile-circle {
-  width: 290px;
-  height: 290px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 75px;
-  font-weight: 900;
-  color: white;
-  background: linear-gradient(145deg,#10233f,#7896b8);
-  border: 12px solid var(--surface);
-  box-shadow: var(--shadow);
+section {padding:85px 0}
+.section-head {
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 40px;
 }
-
-/* ABOUT */
-
+.section-kicker {
+  color:var(--blue);
+  font-size:13px;
+  font-weight:bold;
+  letter-spacing:3px;
+}
+h2 {
+  font-size:clamp(30px,4vw,45px);
+  margin:10px 0;
+}
+.section-head p,.muted {color:var(--muted)}
+.panel,.skill-card,.project-card,
+.timeline-card,.credential-card,.contact-card {
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:0 15px 40px #07172b12;
+}
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 45px;
-  align-items: center;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:25px;
 }
-
-.about-text h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
+.panel {padding:30px}
+.panel h3 {margin-bottom:12px}
+.panel p {margin-bottom:12px}
+.stats {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
 }
-
-.about-text p {
-  color: var(--muted);
-  margin-bottom: 15px;
+.stat {
+  padding:23px;
+  border-radius:15px;
+  background:var(--surface);
+  border:1px solid var(--line);
 }
-
-.info-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+.stat strong {
+  display:block;
+  font-size:32px;
+  color:var(--blue);
 }
-
-.info-card {
-  background: var(--surface);
-  padding: 24px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-}
-
-.info-card strong {
-  display: block;
-  font-size: 27px;
-  color: var(--primary);
-}
-
-.info-card small {
-  color: var(--muted);
-}
-
-/* SKILLS */
-
-.skills-section, .projects-section {
-  background: var(--surface);
-}
-
+.stat span {color:var(--muted)}
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
-
 .skill-card {
-  padding: 25px;
-  background: var(--background);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  transition: .3s;
+  padding:23px;
+  transition:.3s;
 }
-
-.skill-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow);
+.skill-card:hover,.project-card:hover {
+  transform:translateY(-5px);
+  border-color:var(--blue);
 }
-
 .skill-icon {
-  font-size: 30px;
-  margin-bottom: 12px;
+  font-size:30px;
+  margin-bottom:12px;
 }
-
-.skill-card h3 {
-  font-size: 17px;
-  margin-bottom: 8px;
+.skill-card h3 {margin-bottom:7px}
+.skill-card p,.project-card p {
+  color:var(--muted);
+  font-size:14px;
 }
-
-.skill-card p {
-  color: var(--muted);
-  font-size: 13px;
+.timeline {max-width:800px;margin:auto}
+.timeline-card {
+  padding:30px;
+  border-left:4px solid var(--blue);
 }
-
-.progress {
-  height: 7px;
-  background: var(--border);
-  border-radius: 20px;
-  margin-top: 18px;
-  overflow: hidden;
+.timeline-card h3 {font-size:23px}
+.company {
+  color:var(--blue);
+  font-weight:bold;
+  margin:5px 0 12px;
 }
-
-.progress span {
-  display: block;
-  height: 100%;
-  width: 0;
-  background: linear-gradient(90deg,#19375c,#9bb8dc);
-  border-radius: 20px;
-  transition: width 1.5s ease;
-}
-
-/* EXPERIENCE */
-
-.experience-card {
-  max-width: 800px;
-  margin: auto;
-  background: var(--surface);
-  border-left: 5px solid var(--secondary);
-  padding: 30px;
-  border-radius: 0 12px 12px 0;
-  box-shadow: var(--shadow);
-}
-
-.experience-card p {
-  color: var(--muted);
-}
-
-/* PROJECTS */
-
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 22px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
-
-.project-card {
-  background: var(--background);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: .3s;
+.project-card {padding:25px;transition:.3s}
+.project-icon {font-size:35px;margin-bottom:12px}
+.project-card h3 {margin-bottom:10px}
+.credentials-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
 }
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow);
+.credential-card {
+  padding:25px;
+  display:flex;
+  gap:15px;
 }
-
-.project-art {
-  height: 170px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg,#10233f,#7896b8);
-  color: white;
-  font-size: 45px;
-}
-
-.project-info {
-  padding: 22px;
-}
-
-.project-info h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.project-info p {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-/* EDUCATION */
-
-.education-card {
-  max-width: 750px;
-  margin: 15px auto;
-  padding: 25px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-}
-
-.education-card p {
-  color: var(--muted);
-  margin-top: 8px;
-}
-
-/* CONTACT */
-
-.contact-section {
-  background: var(--surface);
-}
-
+.credential-card .symbol {font-size:30px}
 .contact-grid {
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: 30px;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:20px;
 }
-
-.contact-details {
-  background: #10233f;
-  color: white;
-  padding: 30px;
-  border-radius: 12px;
+.contact-card {padding:28px}
+.contact-line {
+  display:flex;
+  gap:13px;
+  margin-top:18px;
 }
-
-.contact-details h3 {
-  color: white;
-  margin-bottom: 20px;
-}
-
-.contact-details p {
-  margin-bottom: 18px;
-  font-size: 14px;
-  overflow-wrap: anywhere;
-}
-
-.contact-details a {
-  color: #bcd2ec;
-}
-
-.contact-form {
-  padding: 27px;
-  background: var(--background);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
-  border-radius: 7px;
-  outline: none;
-}
-
-.contact-form textarea {
-  height: 140px;
-  resize: vertical;
-}
-
-.contact-form button {
-  width: 100%;
-}
-
-/* FOOTER */
-
+.contact-line b {display:block}
+.contact-line span {color:var(--muted)}
+.contact-note {color:var(--muted);font-size:14px}
 footer {
-  background: #0b1b30;
-  color: #c4d0df;
-  padding: 28px 15px;
-  text-align: center;
-  font-size: 13px;
+  background:var(--navy);
+  color:#b8c9da;
+  text-align:center;
+  padding:28px 0;
 }
-
-/* CHAT */
-
-.chat-toggle {
-  position: fixed;
-  right: 20px;
-  bottom: 22px;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  border: none;
-  background: #10233f;
-  color: white;
-  font-size: 25px;
-  z-index: 1500;
-  box-shadow: 0 5px 20px rgba(0,0,0,.25);
-}
-
-.chat-box {
-  position: fixed;
-  right: 20px;
-  bottom: 92px;
-  width: min(340px, calc(100% - 35px));
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 13px;
-  box-shadow: var(--shadow);
-  z-index: 1500;
-  display: none;
-  overflow: hidden;
-}
-
-.chat-box.active {
-  display: block;
-}
-
-.chat-header {
-  padding: 16px;
-  background: #10233f;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-}
-
-.chat-header button {
-  border: none;
-  background: none;
-  color: white;
-  font-size: 22px;
-}
-
-.chat-content {
-  height: 230px;
-  padding: 15px;
-  overflow-y: auto;
-  font-size: 13px;
-}
-
-.chat-message {
-  padding: 11px;
-  border-radius: 9px;
-  margin-bottom: 10px;
-  background: var(--background);
-  color: var(--text);
-  overflow-wrap: anywhere;
-}
-
-.chat-message.user {
-  background: #dce9f7;
-  color: #10233f;
-  text-align: right;
-}
-
-.chat-input {
-  display: flex;
-  border-top: 1px solid var(--border);
-}
-
-.chat-input input {
-  flex: 1;
-  min-width: 0;
-  padding: 13px;
-  border: none;
-  outline: none;
-  background: var(--surface);
-  color: var(--text);
-}
-
-.chat-input button {
-  padding: 0 17px;
-  background: #10233f;
-  color: white;
-  border: none;
-}
-
-/* ANIMATIONS */
-
-/* IMPORTANT: CONTENT IS VISIBLE BY DEFAULT */
-
 .reveal {
-  opacity: 1;
-  visibility: visible;
-  transform: none;
+  opacity:0;
+  transform:translateY(20px);
+  transition:.6s;
+}
+.reveal.visible {
+  opacity:1;
+  transform:translateY(0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .reveal {
-    animation: fadeIn .7s ease both;
+@media(max-width:900px) {
+  .nav-links {gap:12px}
+  .nav-links a {font-size:12px}
+  .skills-grid {grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:720px) {
+  .menu-btn {display:block}
+  .nav-links {
+    display:none;
+    position:absolute;
+    top:75px;
+    left:0;
+    right:0;
+    background:var(--surface);
+    padding:20px;
+    flex-direction:column;
+    gap:15px;
+    border-bottom:1px solid var(--line);
   }
+  .nav-links.open {display:flex}
+  .hero {padding:70px 0}
+  .hero-grid,.about-grid,.contact-grid {
+    grid-template-columns:1fr;
+  }
+  .hero-grid {text-align:center}
+  .hero-copy {margin-left:auto;margin-right:auto}
+  .button-row {justify-content:center}
+  .monogram-wrap {grid-row:1}
+  .monogram {width:190px;height:190px;font-size:60px}
+  .projects-grid {grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:520px) {
+  .skills-grid,.projects-grid,
+  .credentials-grid,.stats {
+    grid-template-columns:1fr;
+  }
+  .button-row .btn {width:100%;text-align:center}
+  section {padding:65px 0}
+}
+@media(prefers-reduced-motion:reduce) {
+  * {scroll-behavior:auto!important;transition:none!important}
+  .reveal {opacity:1;transform:none}
+}
+</style>
+</head>
 
-  @keyframes fadeIn {
-    from {
-      opacity: .65;
-      transform: translateY(12px);
+<body>
+
+<header>
+<nav class="container">
+  <a href="#home" class="brand">W<span>.</span>WELI</a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">☾</button>
+    <button class="menu-btn" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+<div class="container hero-grid">
+  <div>
+    <p class="eyebrow">Welcome to my professional portfolio</p>
+
+    <h1>Chigozirim<br><span>Wilson Weli</span></h1>
+
+    <p class="hero-role">
+      Frontend Developer · UI/UX Designer · AI Specialist
+    </p>
+
+    <p class="hero-copy">
+      I am a technology-driven professional passionate about
+      building modern digital experiences, designing intuitive
+      interfaces and exploring intelligent AI-powered solutions.
+      I combine creativity, technical knowledge and problem-solving
+      to deliver meaningful results.
+    </p>
+
+    <div class="button-row">
+      <a href="#projects" class="btn btn-primary">Explore My Work ↗</a>
+      <button class="btn btn-outline" id="downloadCv">Download CV ↓</button>
+      <a href="#contact" class="btn btn-outline">Contact Me</a>
+    </div>
+  </div>
+
+  <div class="monogram-wrap">
+    <div class="monogram">CW</div>
+  </div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+  <div class="section-head reveal">
+    <span class="section-kicker">GET TO KNOW ME</span>
+    <h2>Building Digital Experiences With Purpose</h2>
+    <p>Professional background, passion and career journey.</p>
+  </div>
+
+  <div class="about-grid">
+    <article class="panel reveal">
+      <h3>About Me</h3>
+      <p>
+        My name is Chigozirim Wilson Weli. I am a Frontend
+        Developer, UI/UX Designer and AI Specialist.
+      </p>
+      <p>
+        My interests include web development, interface design,
+        digital innovation and the practical application of
+        artificial intelligence to solve problems.
+      </p>
+      <p>
+        I also have professional experience in safety operations
+        and currently serve as a Safety Officer at Lubrik
+        Construction Company.
+      </p>
+      <p>
+        I believe in continuous learning, professional excellence
+        and creating solutions that make a positive difference.
+      </p>
+    </article>
+
+    <div class="stats reveal">
+      <div class="stat"><strong>20+</strong><span>Years of Experience</span></div>
+      <div class="stat"><strong>03</strong><span>Core Professional Areas</span></div>
+      <div class="stat"><strong>AI</strong><span>Artificial Intelligence</span></div>
+      <div class="stat"><strong>PH</strong><span>Port Harcourt, Nigeria</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+  <div class="section-head reveal">
+    <span class="section-kicker">WHAT I CAN DO</span>
+    <h2>Professional Skills</h2>
+    <p>Technical capabilities and areas of professional interest.</p>
+  </div>
+
+  <div class="skills-grid">
+    <article class="skill-card reveal"><div class="skill-icon">🌐</div><h3>HTML5</h3><p>Structured and accessible web pages.</p></article>
+    <article class="skill-card reveal"><div class="skill-icon">🎨</div><h3>CSS3</h3><p>Responsive layouts and modern interfaces.</p></article>
+    <article class="skill-card reveal"><div class="skill-icon">⚡</div><h3>JavaScript</h3><p>Interactive website functionality.</p></article>
+    <article class="skill-card reveal"><div class="skill-icon">🖌️</div><h3>UI/UX Design</h3><p>User-friendly digital experiences.</p></article>
+    <article class="skill-card reveal"><div class="skill-icon">🤖</div><h3>Artificial Intelligence</h3><p>AI applications and creative workflows.</p></article>
+    <article class="skill-card reveal"><div class="skill-icon">✍️</div><h3>Prompt Engineering</h3><p>Structured prompts for effective AI outputs.</p></article>
+    <article class="skill-card reveal"><div class="skill-icon">⚛️</div><h3>React</h3><p>Component-based frontend development.</p></article>
+    <article class="skill-card reveal"><div class="skill-icon">🐍</div><h3>Python</h3><p>Programming and automation interests.</p></article>
+    <article class="skill-card reveal"><div class="skill-icon">🔧</div><h3>Git & GitHub</h3><p>Version control and deployment.</p></article>
+    <article class="skill-card reveal"><div class="skill-icon">📰</div><h3>WordPress</h3><p>Website management and publishing.</p></article>
+    <article class="skill-card reveal"><div class="skill-icon">📐</div><h3>Figma</h3><p>Wireframes and interface prototyping.</p></article>
+    <article class="skill-card reveal"><div class="skill-icon">🦺</div><h3>Safety Operations</h3><p>Workplace safety and professional practice.</p></article>
+  </div>
+</div>
+</section>
+
+<section id="experience">
+<div class="container">
+  <div class="section-head reveal">
+    <span class="section-kicker">CAREER JOURNEY</span>
+    <h2>Professional Experience</h2>
+    <p>Professional discipline, problem-solving and continuous improvement.</p>
+  </div>
+
+  <div class="timeline reveal">
+    <article class="timeline-card">
+      <h3>Safety Officer</h3>
+      <p class="company">Lubrik Construction Company</p>
+      <p class="muted">
+        Supporting workplace safety operations, promoting compliance
+        with safety procedures, identifying potential hazards and
+        encouraging a strong safety culture.
+      </p>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+  <div class="section-head reveal">
+    <span class="section-kicker">MY WORK</span>
+    <h2>Featured Projects</h2>
+    <p>Selected digital projects and creative concepts.</p>
+  </div>
+
+  <div class="projects-grid">
+    <article class="project-card reveal">
+      <div class="project-icon">💻</div>
+      <h3>Personal Portfolio</h3>
+      <p>A responsive portfolio website showcasing professional identity, skills and projects.</p>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-icon">🍽️</div>
+      <h3>Wilson's Kitchen</h3>
+      <p>A food business website concept presenting meals, services and customer information.</p>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-icon">🤖</div>
+      <h3>AI Digital Solutions</h3>
+      <p>Exploring AI-assisted digital creativity and technology solutions.</p>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="education">
+<div class="container">
+  <div class="section-head reveal">
+    <span class="section-kicker">LEARNING & DEVELOPMENT</span>
+    <h2>Education & Certifications</h2>
+    <p>Continuous learning and professional growth.</p>
+  </div>
+
+  <div class="credentials-grid">
+    <article class="credential-card reveal">
+      <div class="symbol">🎓</div>
+      <div>
+        <h3>Bachelor's Degree</h3>
+        <p class="muted">B.Sc. Geography and Environmental Studies.</p>
+      </div>
+    </article>
+
+    <article class="credential-card reveal">
+      <div class="symbol">🏅</div>
+      <div>
+        <h3>ITF AI Level 3 Specialist</h3>
+        <p class="muted">Currently in progress.</p>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="section-head reveal">
+    <span class="section-kicker">LET'S CONNECT</span>
+    <h2>Get In Touch</h2>
+    <p>Let's discuss professional opportunities and projects.</p>
+  </div>
+
+  <div class="contact-grid">
+    <article class="contact-card reveal">
+      <h3>Contact Information</h3>
+      <div class="contact-line">
+        <span>📍</span>
+        <div><b>Location</b><span>Port Harcourt, Rivers State, Nigeria</span></div>
+      </div>
+      <div class="contact-line">
+        <span>💼</span>
+        <div><b>Professional Interests</b><span>Frontend Development, UI/UX Design, AI and Safety Operations</span></div>
+      </div>
+    </article>
+
+    <article class="contact-card reveal">
+      <h3>Start a Conversation</h3>
+      <p class="contact-note">
+        Add your real email address in the CONTACT_EMAIL setting
+        in the JavaScript section to activate this button.
+      </p>
+      <a class="btn btn-primary" id="emailLink" href="#contact" style="margin-top:20px">Email Me ↗</a>
+    </article>
+  </div>
+</div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Chigozirim Wilson Weli. All rights reserved.
+  </div>
+</footer>
+
+<script>
+// Add your real email address between the quotes.
+const CONTACT_EMAIL = "";
+
+const navLinks = document.getElementById("navLinks");
+const menuToggle = document.getElementById("menuToggle");
+const themeToggle = document.getElementById("themeToggle");
+
+// Mobile navigation
+menuToggle.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuToggle.textContent = open ? "✕" : "☰";
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
+  });
+});
+
+// Dark and light mode
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  const dark = document.body.classList.contains("dark");
+  themeToggle.textContent = dark ? "☀" : "☾";
+});
+
+// Automatic copyright year
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+// Email button
+const emailLink = document.getElementById("emailLink");
+
+if (CONTACT_EMAIL.trim()) {
+  emailLink.href = "mailto:" + CONTACT_EMAIL.trim();
+} else {
+  emailLink.addEventListener("click", event => {
+    event.preventDefault();
+    alert("Please add your email address in CONTACT_EMAIL first.");
+  });
+}
+
+// Download CV as text file
+document.getElementById("downloadCv").addEventListener("click", () => {
+  const cv = `CHIGOZIRIM WILSON WELI
+Frontend Developer | UI/UX Designer | AI Specialist
+Safety Officer | Port Harcourt, Nigeria
+
+PROFILE
+Technology-driven professional passionate about frontend web development, UI/UX design and artificial intelligence. Also experienced in safety operations.
+
+PROFESSIONAL EXPERIENCE
+Safety Officer — Lubrik Construction Company.
+Supports workplace safety operations, promotes compliance with safety procedures, identifies potential hazards and encourages a strong safety culture.
+
+TECHNICAL SKILLS
+HTML5, CSS3, JavaScript, UI/UX Design, Artificial Intelligence, Prompt Engineering, React, Python, Git & GitHub, WordPress, Figma and Safety Operations.
+
+PROJECTS
+Personal Portfolio.
+Wilson's Kitchen.
+AI Digital Solutions.
+
+EDUCATION
+B.Sc. Geography and Environmental Studies.
+ITF AI Level 3 Specialist — In Progress.
+
+Please add verified employment dates, contact details and other relevant information before submitting this CV.`;
+
+  const blob = new Blob([cv], {
+    type: "text/plain;charset=utf-8"
+  });
+
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.download = "Chigozirim-Wilson-Weli-CV.txt";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+
+  URL.revokeObjectURL(url);
+});
+
+// Scroll reveal animation
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  });
+}, {threshold:0.12});
+
+document.querySelectorAll(".reveal").forEach(element => {
+  observer.observe(element);
+});
+</script>
+
+</body>
+</html>
+}
   }
 }
 
